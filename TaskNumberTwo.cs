@@ -2,13 +2,13 @@
 
 namespace Lab_5_
 {
-    internal class TaskNumberTwo
+    static class TaskNumberTwo
     {
         /// <summary>
         /// Проверяет, введено ли целое число
         /// </summary>
         /// <param name="inputData"></param>
-        public void CheckIntegerValue()
+        public static void CheckIntegerValue()
         {
             Console.WriteLine("Введите целое число");
             string inputData = Console.ReadLine();
@@ -26,7 +26,7 @@ namespace Lab_5_
         /// </summary>
         /// <param name="inputData"></param>
         /// <returns></returns>
-        static int GetDigitSum(string inputData)
+        private static int GetDigitSum(string inputData)
         {
             int result = 0;
             for (int i = 0; i < inputData.Length; i++)
@@ -53,7 +53,7 @@ namespace Lab_5_
         /// Выводит результат в консоль
         /// </summary>
         /// <param name="result"></param>
-        static void PrintResult(int result)
+        private static void PrintResult(int result)
         {
             Console.Write($"Сумма цифр числа = {result}");
         }
@@ -63,7 +63,7 @@ namespace Lab_5_
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        static bool CheckSymbolsOfString(string str)
+        private static bool CheckSymbolsOfString(string str)
         {
             bool isDigit = true;
             foreach (char item in str)

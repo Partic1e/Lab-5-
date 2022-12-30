@@ -33,16 +33,13 @@ namespace Lab_5_
                 switch (taskNum)
                 {
                     case "1":
-                        TaskNumberOne taskOne = new TaskNumberOne();
-                        taskOne.GetString();
+                        TaskNumberOne.GetString();
                         break;
                     case "2":
-                        TaskNumberTwo taskTwo = new TaskNumberTwo();
-                        taskTwo.CheckIntegerValue();
+                        TaskNumberTwo.CheckIntegerValue();
                         break;
                     case "4":
-                        TaskNumberFour taskFour = new TaskNumberFour();
-                        taskFour.GetString();
+                        TaskNumberFour.GetString();
                         break;
                     default:
                         Console.WriteLine("Выход из программы");

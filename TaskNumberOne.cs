@@ -4,12 +4,12 @@ using System.Globalization;
 
 namespace Lab_5_
 {
-    internal class TaskNumberOne
+    static class TaskNumberOne
     {
         /// <summary>
         /// Получает строку на в ввод 
         /// </summary>
-        public void GetString()
+        public static void GetString()
         {
             Console.WriteLine("Введите число");
             string inputData = Console.ReadLine();
@@ -22,7 +22,7 @@ namespace Lab_5_
         /// Проверяет целостность введённого из строки числа
         /// </summary>
         /// <param name="inputData"></param>
-        static void CheckValueFromString(string inputData)
+        private static void CheckValueFromString(string inputData)
         {
             if (int.TryParse(inputData, out int value))
                 WriteIntValue(value);
@@ -34,7 +34,7 @@ namespace Lab_5_
         /// Выводит символ целого числа
         /// </summary>
         /// <param name="value"></param>
-        static void WriteIntValue(int value)
+        private static void WriteIntValue(int value)
         {
             char symbol = Convert.ToChar(value);
             Console.WriteLine(symbol);
@@ -44,7 +44,7 @@ namespace Lab_5_
         /// Сравнивает два числа с плавающей точкой
         /// </summary>
         /// <param name="inputData"></param>
-        static void CompareFloatValues(string inputData)
+        private static void CompareFloatValues(string inputData)
         {
             List<float> list = new List<float>() { float.NaN, float.NaN };
             for (int i = 1; ; i++)

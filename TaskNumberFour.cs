@@ -3,12 +3,12 @@ using System.Globalization;
 
 namespace Lab_5_
 {
-    internal class TaskNumberFour
+    static class TaskNumberFour
     {
         /// <summary>
         /// Принимает на ввод строку
         /// </summary>
-        public void GetString()
+        public static void GetString()
         {
             Console.WriteLine("Введите элементы массива через пробел");
             string inputData = Console.ReadLine();
@@ -19,7 +19,7 @@ namespace Lab_5_
         /// Конвертирует строку в массив и изменяет его
         /// </summary>
         /// <param name="inputdata"></param>
-        static void ConvertToArray(string inputdata)
+        private static void ConvertToArray(string inputdata)
         {
             string[] array = inputdata.Split(" ");
             PrintArray(array);
@@ -41,7 +41,7 @@ namespace Lab_5_
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        static string Factorial(int value)
+        private static string Factorial(int value)
         {
             int result = 1;
             for (int i = 1; i <= value; i++)
@@ -56,7 +56,7 @@ namespace Lab_5_
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        static string GetFractionalPart(string str)
+        private static string GetFractionalPart(string str)
         {
             double value = double.Parse(str, CultureInfo.InvariantCulture);
             if (value < 0)
@@ -69,7 +69,7 @@ namespace Lab_5_
         /// Выводит массив в консоль
         /// </summary>
         /// <param name="array"></param>
-        static void PrintArray(string[] array)
+        private static void PrintArray(string[] array)
         {
             foreach (string item in array)
                 Console.Write($"| {item} |");
